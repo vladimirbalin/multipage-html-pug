@@ -1,0 +1,19 @@
+mixin carouselInner(num, btnText, heading, btnClass)
+    .carousel-item(class= num)
+            .container
+                .carousel-caption.d-none.d-sm-block.text-right.mb-5
+                    h1.display-3= heading
+                    p.lead Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus, nihil. Nesciunt tempora veritatis natus dolor vitae praesentium cupiditate fuga totam.
+                    a.btn.btn-lg(href="#", class= btnClass)= btnText
+
+section#carousel
+    #myCarousel.carousel.slide(data-ride="carousel")
+        ol.carousel-indicators
+            li.active(data-target="#myCarousel", data-slide-to="0")
+            li(data-target="#myCarousel", data-slide-to="1")
+            li(data-target="#myCarousel", data-slide-to="2")
+        .carousel-inner
+            +carouselInner('carousel-image-1 active', 'Sign Up Now', 'Heading One', 'btn-primary')
+            +carouselInner('carousel-image-2', 'Learn More', 'Heading Two', 'btn-danger')
+            +carouselInner('carousel-image-3', 'Sign Up Now','Heading Three', 'btn-dark')
+        
