@@ -9,8 +9,9 @@ mixin slide(name, company, text)
     div
         blockquote.blockquote
             p.mb-0= text
-            .blockquote-footer= name
-                cite(title="Company 1")= company
+            .blockquote-footer.text-light= name
+                cite.text-light(title="Company 1")= company
+
 
 header#page-header
     .container
@@ -39,7 +40,8 @@ section#icon-boxes.p-5
             +card('fa-coffee')(style={'background-color': '#e5989b'})
             +card('fa-cat')(style={'background-color': '#ffb4a2'})
             +card('fa-ghost')(style={'background-color': '#b5838d'})
-section#testimonials.p-4.bg-dark.text-white
+section#testimonials.p-4.text-white(style={'background': 'rgb(109,104,117)',
+                                'background': 'linear-gradient(90deg, rgba(109,104,117,1) 0%, rgba(181,131,141,1) 100%)'})
     .container
         h2.text-center Testimonials
         .row.text-center

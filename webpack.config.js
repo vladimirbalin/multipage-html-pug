@@ -122,17 +122,6 @@ module.exports = {
         },
       },
       {
-        test: /\.(eot|ttf|woff|woff2)$/,
-        use: [
-          {
-            loader: "file-loader",
-            options: {
-              name: "[path][name].[ext]",
-            },
-          },
-        ],
-      },
-      {
         test: /\.pug$/,
         loader: "pug-loader",
       },

@@ -1,0 +1,16 @@
+#faq {
+  .card {
+    border: #444;
+  }
+  a {
+    display: block;
+    color: #ffffff;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+  }
+  .card-body,
+  .card-header {
+    background: #333;
+  }
+}

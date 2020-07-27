@@ -1,14 +1,30 @@
 import "../scss/index.scss";
+
 $(document).ready(function () {
+  // navbar active class
+  const pathArr = window.location.pathname.split("/");
+  pathArr[pathArr.length - 1]
+    ? $(`a[data-path='${pathArr[pathArr.length - 1]}']`)
+        .parent()
+        .addClass("active")
+    : $(`a[data-path='index.html']`).parent().addClass("active");
+
+  // footer-year
   $("#year").text(new Date().getFullYear());
-  // slider config
+
+  $("button[type=submit]").on("click", (event) => {
+    event.preventDefault();
+  });
+
+  // index-page
+  // slider
   $(".carousel").carousel({
     interval: 6000,
     pause: "hover",
   });
 
   $(function () {
-    // Auto play modal video
+    // modal video
     $(".video").click(function (event) {
       event.preventDefault();
       var theModal = $(this).data("target"),
@@ -29,20 +45,13 @@ $(document).ready(function () {
     $(this).ekkoLightbox();
   });
 
-  $("button[type=submit]").on("click", (event) => {
-    event.preventDefault();
-  });
-
-  const pathArr = window.location.pathname.split("/");
-  $(`a[data-path='${pathArr[pathArr.length - 1]}']`)
-    .parent()
-    .addClass("active");
-
-  //slick
-
-  $(".slider").slick({
-    infinite: true,
-    slideToShow: 1,
-    slideToScroll: 1,
-  });
+  // about-page
+  if (window.location.pathname === "/about.html") {
+    $(".slider").slick({
+      infinite: true,
+      slideToShow: 1,
+      slideToScroll: 1,
+    });
+  }
+  $(".collapse").collapse("hide");
 });
