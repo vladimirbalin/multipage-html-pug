@@ -1,9 +1,21 @@
-@import "./includes/includes-styles.scss";
+@import "./variables.scss";
+@import "./parts/navbar";
+@import "./parts/carousel";
+@import "./parts/index-content";
+@import "./parts/about-content";
 
 * {
   box-sizing: border-box;
 }
 body {
   justify-content: center;
-  background-color: bisque;
+  background-color: $color-primary;
+}
+.dark-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
 }

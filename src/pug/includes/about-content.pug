@@ -1,0 +1,51 @@
+mixin card(icon)
+    .col-md-4
+        .card.text-white.text-center&attributes(attributes)
+            .card-body
+                i.fas.fa-3x(class= icon) 
+                h3 Sample heading 
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat, porro.
+mixin slide(name, company, text)
+    div
+        blockquote.blockquote
+            p.mb-0= text
+            .blockquote-footer= name
+                cite(title="Company 1")= company
+
+header#page-header
+    .container
+        .dark-overlay.pt-5
+            .row.no-gutters
+                .col-md-6.m-auto.text-center
+                    h1 About us
+                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, perferendis.
+section#about.pt-3
+    .container
+        .row
+            .col-md-6
+                h1 What we do
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio explicabo nobis possimus repellat illum ullam. Eveniet, ipsa error quam, magni necessitatibus provident dolores perferendis sequi temporibus laudantium facere iusto deserunt illum, voluptates quasi illo. Quas earum, laboriosam eius minima ipsum officia quam enim sapiente at. Fugiat voluptatibus ratione quo consectetur!
+                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis vitae doloribus nemo id saepe pariatur perferendis libero fuga nihil harum enim, quasi eos veniam accusantium amet, sint nam maxime sequi labore impedit illum sit? Quam est quidem, cupiditate totam non adipisci soluta dolores explicabo perspiciatis placeat, eum sapiente neque nobis?
+                
+            .col-md-6
+                img.img-fluid.rounded-circle.d-none.d-md-block.about-img(src="http://placekitten.com/g/700/700", alt="kitty")
+section#icon-boxes.p-5
+    .container
+        .row.mb-4
+            +card('fa-building')(style={'background-color': '#72a98f'})
+            +card('fa-bullhorn')(style={'background-color': '#6d6875'})
+            +card('fa-comments')(style={'background-color': '#e27396'})
+        .row.mb-4
+            +card('fa-coffee')(style={'background-color': '#e5989b'})
+            +card('fa-cat')(style={'background-color': '#ffb4a2'})
+            +card('fa-ghost')(style={'background-color': '#b5838d'})
+section#testimonials.p-4.bg-dark.text-white
+    .container
+        h2.text-center Testimonials
+        .row.text-center
+            .col
+                .slider
+                    +slide('John Doe From ', 'Company #1', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione, fugit!')
+                    +slide('Sam Smith From ', 'Company #2', 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Reprehenderit, vero.')
+                    +slide('Meghan Williams From ', 'Company #3', 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia, quisquam.')
+                        

@@ -1,5 +1,5 @@
-mixin carouselInner(num, btnText, heading, btnClass)
-    .carousel-item(class= num)
+mixin carouselInner(classArg, btnText, heading, btnClass)
+    .carousel-item(class= classArg)
             .container
                 .carousel-caption.d-none.d-sm-block.text-right.mb-5
                     h1.display-3= heading
@@ -13,7 +13,11 @@ section#carousel
             li(data-target="#myCarousel", data-slide-to="1")
             li(data-target="#myCarousel", data-slide-to="2")
         .carousel-inner
-            +carouselInner('carousel-image-1 active', 'Sign Up Now', 'Heading One', 'btn-primary')
-            +carouselInner('carousel-image-2', 'Learn More', 'Heading Two', 'btn-danger')
-            +carouselInner('carousel-image-3', 'Sign Up Now','Heading Three', 'btn-dark')
+            +carouselInner('carousel-image-1 active', 'Sign Up Now', 'Heading One', 'btn-outline-light ')
+            +carouselInner('carousel-image-2', 'Learn More', 'Heading Two', 'btn-outline-light')
+            +carouselInner('carousel-image-3', 'Let\'s go','Heading Three', 'btn-outline-light')
+            a.carousel-control-prev(href="#myCarousel", data-slide="prev")
+                span.carousel-control-prev-icon
+            a.carousel-control-next(href="#myCarousel", data-slide="next")
+                span.carousel-control-next-icon
         

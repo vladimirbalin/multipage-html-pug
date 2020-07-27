@@ -1,0 +1,41 @@
+#home-heading {
+  position: relative;
+  min-height: 200px;
+  background: url("../img/lights.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  text-align: center;
+  color: white;
+}
+#video-play {
+  position: relative;
+  min-height: 200px;
+  background: url("../img/media.jpg");
+  background-attachment: fixed;
+  background-repeat: no-repeat;
+  background-position: 0 -300px;
+  text-align: center;
+  color: white;
+  .video {
+    color: #fff;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
+.modal {
+  .modal-content {
+    background-color: $color-primary;
+  }
+  .close {
+    position: absolute;
+    top: -25px;
+    right: -45px;
+    opacity: 0.9;
+    outline: none;
+    span {
+      font-size: 52px;
+      color: #fff;
+    }
+  }
+}

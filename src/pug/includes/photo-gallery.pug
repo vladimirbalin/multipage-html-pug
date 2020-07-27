@@ -1,0 +1,18 @@
+mixin galleryInner(aHref, imgSrc)
+    .col-md-4
+        a(href= aHref, data-toggle="lightbox", data-gallery="img-gallery", data-height="450", data-width="450")
+            img.img-fluid(src= imgSrc)
+
+section#gallery.py-5
+    .container
+        h1.text-center Photo Gallery
+        p.text-center Check out our photos
+        .row.mb-4
+            +galleryInner("https://placekitten.com/450/450", "https://placekitten.com/250/250")
+            +galleryInner("https://placekitten.com/450/450", "https://placekitten.com/249/251")
+            +galleryInner("https://placekitten.com/450/450", "https://placekitten.com/252/252")
+        .row.mb-4
+            +galleryInner("https://placekitten.com/450/450", "https://placekitten.com/253/253")
+            +galleryInner("https://placekitten.com/450/450", "https://placekitten.com/254/254")
+            +galleryInner("https://placekitten.com/450/450", "https://placekitten.com/251/252")
+            

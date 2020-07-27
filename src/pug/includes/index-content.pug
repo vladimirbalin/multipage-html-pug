@@ -1,0 +1,51 @@
+section#home-icons.py-5
+    .container
+        .row
+            .col-md-4.mb-4.text-center
+                i.fas.fa-cog.fa-3x.mb-2
+                h3 Turning Gears
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, rem!
+            .col-md-4.mb-4.text-center
+                i.fas.fa-cloud.fa-3x.mb-2
+                h3 Sending Data
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, rem!
+            .col-md-4.mb-4.text-center
+                i.fas.fa-cart-plus.fa-3x.mb-2
+                h3 Making money
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus, rem!
+section#home-heading
+    .dark-overlay
+        .row.no-gutters
+            .col
+                .container.pt-5
+                    h1 Are you ready to get started?
+                    p.d-none.d-md-block Lorem ipsum dolor, sit amet consectetur adipisicing elit. Enim ut pariatur ab nam, sit non magni quia architecto incidunt iusto.
+section#info.py-3
+    .container
+        .row.no-gutters
+            .col-md-6.align-self-center
+                h3 Lorem, ipsum.
+                p Lorem, ipsum dolor sit amet consectetur adipisicing elit. Molestias aspernatur doloribus fugiat velit magni facilis tenetur, neque nihil accusantium maxime.
+                a.btn.btn-outline-danger.btn-lg(href="#") Lean more
+            .col-md-6
+                img.img-fluid(src="img/laptop.png", alt="laptop")
+section#video-play
+    .dark-overlay
+        .row.no-gutters
+            .col
+                .container.p-5
+                    a.video(href="#", data-video="https://www.youtube.com/embed/FRfeejofvAM", data-toggle="modal", data-target="#videoModal")
+                        i.fas.fa-play.fa-3x
+                        h1 See how we do
+include ./photo-gallery.pug
+section#newsletter.text-center.p-5.bg-dark.text-white
+    .container
+        .row
+            .col
+                h1 Sign up for our newsletter
+                p Lorem ipsum dolor sit amet consectetur adipisicing elit. Odio ipsam iste exercitationem ipsum cumque aspernatur amet ab porro magni possimus?
+                form.form-inline.justify-content-center
+                    input.form-control.mb-2.mr-2(placeholder="Enter name")
+                    input.form-control.mb-2.mr-2(placeholder="Enter email")
+                    button.btn.btn-outline-light.mb-2(type="submit") Submit
+include ./common/modal.pug
