@@ -1,0 +1,25 @@
+mixin card(cardTitle, imgSrc, writtenBy)
+    .card
+        img.img-fluid.card-img-top(src= imgSrc)
+        .card-body
+            h4.card-title= cardTitle
+            small.text-muted= writtenBy
+            p.card-text Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, eum facilis! Molestias facilis quaerat veniam a, repudiandae maxime aliquid, nisi magnam debitis ullam laborum id in repellendus obcaecati, beatae cum?
+    .card.p-3
+        blockquote.card-blockquote.card-body
+            p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Provident hic perferendis aspernatur modi expedita, vitae unde!
+            footer.blockquote-footer
+                small.text-muted Someone Famouse in #[cite(title="Source Title") Source Titlte]
+
+
+include ./common/_title-block.pug
++titleBlock('Read our Blog')
+section#blog.py-3
+    .container
+        .row
+            .col
+                .card-columns
+                    +card('Blog post One', 'https://placekitten.com/300/200', 'Written by Jeff on 06/20')
+                    +card('Blog post Two', 'https://placekitten.com/200/200', 'Written by Jacob on 01/17')
+                    +card('Blog post Three', 'https://placekitten.com/150/120', 'Written by Anna on 02/20')
+                    

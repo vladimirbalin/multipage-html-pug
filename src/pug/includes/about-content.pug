@@ -12,14 +12,8 @@ mixin slide(name, company, text)
             .blockquote-footer.text-light= name
                 cite.text-light(title="Company 1")= company
 
-
-header#page-header
-    .container
-        .dark-overlay.pt-5
-            .row.no-gutters
-                .col-md-6.m-auto.text-center
-                    h1 About us
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, perferendis.
+include ./common/_title-block.pug
++titleBlock('About Us')
 section#about.pt-3
     .container
         .row

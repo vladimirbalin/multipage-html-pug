@@ -1,0 +1,62 @@
+include ./common/_title-block.pug
++titleBlock('Contact us')
+section#contact.py-3
+    .container
+        .row
+            .col-md-4
+                .card.p-4
+                    .card-body
+                        h4 Get in Touch
+                        p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio, quas!
+                        h4 Address
+                        p 550 Main Street, Boston MA
+                        h4 Email
+                        p test@test.com
+                        h4 Phone
+                        p (555) 555-5555
+            .col-md-8
+                .card.p-4
+                    .card-body
+                        h3.text-center Please fill out this form to contact us
+                        hr
+                        .row
+                            .col-md-6
+                                .form-group
+                                    input.form-control(placeholder="First Name")
+                            .col-md-6
+                                .form-group
+                                    input.form-control(placeholder="Last Name")
+                            .col-md-6
+                                .form-group
+                                    input.form-control(placeholder="Email")
+                            .col-md-6
+                                .form-group
+                                    input.form-control(placeholder="Phone number")
+                        .row    
+                            .col-md-12
+                                .form-group
+                                    textarea.form-control(placeholder="Message...")    
+                            .col-md-12
+                                .form-group
+                                    input.btn.btn-outline-danger(type="submit", value="Submit")
+section#staff.py-5.text-center.bg-dark.text-white
+    .container
+        h1 Our Staff
+        hr
+        .row
+            .col-md-3
+                img.img-fluid.rounded-circle.mb-2(src="img/person1.jpg")
+                h4 Jane Doe
+                small Marketing Manager
+            .col-md-3
+                img.img-fluid.rounded-circle.mb-2(src="img/person2.jpg")
+                h4 Sarah Connor
+                small Bussiness Manager
+            .col-md-3
+                img.img-fluid.rounded-circle.mb-2(src="img/person3.jpg")
+                h4 John Doe
+                small CEO
+            .col-md-3
+                img.img-fluid.rounded-circle.mb-2(src="img/person4.jpg")
+                h4 Steve Smith
+                small Web Developer

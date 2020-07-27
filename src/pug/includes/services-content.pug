@@ -14,31 +14,26 @@ mixin card(title, price)
                     +card-list-item('Feature Three')
                     +card-list-item('Feature Four')
                     +card-list-item('Feature Five')
-                a.btn.btn-danger.btn-block.mt-2.text-white Get it
+                a.btn.btn-block.mt-2(style={'background-color': '#ffcdb2'}) Get it
             .card-footer 1 Year Plan
 mixin accordionCard(href, id, title)
     .card
         .card-header
             h5.mb-0
                 //- button.btn.btn-link(data-toggle="collapse", data-target= href, data-parent="accordion", aria-expanded="false", aria-controls= id, type="button") #[= title]
-                a(href= href, data-toggle="collapse", data-parent="accordion") #[= title]
+                a(href= href, data-toggle="collapse", data-parent="#accordion") #[= title]
         div(id= id).collapse
             .card-body Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus nam esse et blanditiis, porro veritatis! Quasi molestias esse accusantium distinctio qui, quas molestiae a quidem quisquam deserunt ducimus commodi nulla eligendi vero quia, aut eos! Tenetur quos fugiat dolor praesentium?
 
-header#page-header
-    .container
-        .dark-overlay.pt-5
-            .row.no-gutters
-                .col-md-6.m-auto.text-center
-                    h1 Services
-                    p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id, perferendis.
+include ./common/_title-block.pug
++titleBlock('Services')
 section#services.py-5
     .container
         .row
             +card('Title one', '49.99$/Month')
             +card('Title two', '79.99$/Month')
             +card('Title three', '99.99$/Month')
-section#faq.p-5.bg-dark.text-white
+section#faq.p-5.text-white(style={'background-color': '#6d6875'})
     .container
         .text-center Frequently Asked Questions
         hr
