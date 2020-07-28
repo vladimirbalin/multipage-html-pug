@@ -46,7 +46,7 @@ $(document).ready(function () {
   });
 
   // about-page
-  if (window.location.pathname === "/about.html") {
+  if (window.location.pathname === "/about-page.html") {
     $(".slider").slick({
       infinite: true,
       slideToShow: 1,
