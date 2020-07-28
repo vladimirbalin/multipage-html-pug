@@ -46,12 +46,13 @@ $(document).ready(function () {
   });
 
   // about-page
-  if (window.location.pathname === "/about-page.html") {
+  const parseUrl = window.location.pathname.split("/");
+  console.log(parseUrl);
+  if (parseUrl[parseUrl.length - 1] === "about-page.html") {
     $(".slider").slick({
       infinite: true,
       slideToShow: 1,
       slideToScroll: 1,
     });
   }
-  // $(".collapse").collapse("hide");
 });
