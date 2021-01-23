@@ -53,5 +53,4 @@ $(document).ready(function () {
       slideToScroll: 1,
     });
   }
-  // $(".collapse").collapse("hide");
 });
