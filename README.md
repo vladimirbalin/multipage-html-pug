@@ -1,3 +1,8 @@
 ﻿# multipage-html-pug
-- bootstrap 4
-- pug
+```
+yarn install
+yarn start 
+```
+or 
+```
+yarn build
